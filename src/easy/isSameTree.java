@@ -1,6 +1,7 @@
 package easy;
 
-import com.java.qcby.TreeNode;
+
+import utils.TreeNode;
 
 /**
  * @author:yuze

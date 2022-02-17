@@ -1,5 +1,7 @@
 package own;
 
+import utils.ListNode;
+
 /**
  * @author:yuze
  * @description:栈结构(泛型)
