@@ -1,5 +1,7 @@
 package secondary;
 
+import java.util.*;
+
 /**
  * @author:yuze
  * @description:leetcode45. 跳跃游戏 II
@@ -16,8 +18,11 @@ public class Jump {
     public static void main(String[] args) {
         int[] nums = {2,3,1,2,4,2,3};
         int jump = jump(nums);
-        System.out.println(jump);
+//        System.out.println(jump);
+//        System.out.println(isValid("((11))()"));
+
     }
+
     /**
      *  如果我们「贪心」地进行正向查找，每次找到可到达的最远位置，就可以在线性时间内得到最少的跳跃次数。
      * 在具体的实现中，我们维护当前能够到达的最大下标位置，记为边界。我们从左到右遍历数组，到达边界时，更新边界并将跳跃次数增加 1。
@@ -65,4 +70,6 @@ public class Jump {
         }
         return steps;
     }
+
+
 }

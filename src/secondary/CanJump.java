@@ -26,4 +26,27 @@ public class CanJump {
 
         return false;
     }
+    public boolean canJump2(int[] nums) {
+        if (nums==null || nums.length==0) return false;
+
+        int i,j,len;
+        len = nums.length;
+        boolean[] dp = new boolean[len];
+        dp[0] = true;
+        for (i=1; i<len; i++) {
+            if (dp[i-1] && nums[i-1]>0) {//上一个元素可以到达，且上一个元素怒>0，则当前元素必然可以到达
+                dp[i] = true;
+            } else {//上一个元素可以到达，但是上一个元素值为0
+                for (j=0; j<i; j++) {
+                    if (dp[j] && nums[j]>=(i-j)) {//遍历上一个元素之前的元素，看是否可以通过某一个元素躲开元素为0的元素直接到达
+                        dp[i] = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        return dp[len-1];
+    }
+
 }
