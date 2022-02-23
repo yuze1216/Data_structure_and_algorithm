@@ -15,6 +15,22 @@ import java.util.Queue;
  * @data:2022/2/16
  */
 public class LevelOrder {
+    public static void main(String[] args) {
+
+        System.out.println(a());
+    }
+     public static int a(){
+         try {
+             System.out.println("try");
+             return 0;
+         }catch (Exception e){
+             System.out.println("car");
+            return 1;
+         }finally {
+             System.out.println("finall");
+             return 2;
+         }
+     }
     public static List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> list = new ArrayList<>();
         if (root == null){
